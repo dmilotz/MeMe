@@ -30,6 +30,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topText.defaultTextAttributes = memeTextAttributes
         topText.delegate = self
         topText.textAlignment = .center
+        
         shareButton.isEnabled = false
         
         imagePicker.image = nil
@@ -117,12 +118,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return true
+        
+            textField.resignFirstResponder()
+            return false
     }
     
     func subscribeToKeyboardNotifications() {
        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
-         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+       NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
         
     }
     
@@ -176,7 +179,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        imagePicker.contentMode  = UIViewContentMode.scaleAspectFit
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
         
         self.subscribeToKeyboardNotifications()
@@ -210,14 +213,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
        
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
-            imagePicker.image = image
+        if let img = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            imagePicker.image = self.fixOrientation(img: img)
+            
             picker.dismiss(animated: true, completion: nil)
         }
          shareButton.isEnabled = true
         
         
     
+        
+    }
+    
+    func fixOrientation(img:UIImage) -> UIImage {
+        
+        if (img.imageOrientation == UIImageOrientation.up) {
+            return img;
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(img.size, false, img.scale);
+        let rect = CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height)
+        img.draw(in: rect)
+        
+        let normalizedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext();
+        return normalizedImage;
         
     }
     
