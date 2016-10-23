@@ -14,11 +14,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var topText: UITextField!
     @IBOutlet var imagePicker: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     var bottomTextCleared = false
     var topTextCleared = false
     var memeImage : UIImage!
     
-    @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBAction func cancelMeme(_ sender: AnyObject) {
+        shareButton.isEnabled = false
+        bottomText.text = "Bottom"
+        bottomText.defaultTextAttributes = memeTextAttributes
+        bottomText.delegate = self
+        bottomText.textAlignment = NSTextAlignment.center
+        
+        topText.text = "Top"
+        topText.defaultTextAttributes = memeTextAttributes
+        topText.delegate = self
+        topText.textAlignment = .center
+        shareButton.isEnabled = false
+        
+        imagePicker.image = nil
+        
+    }
+    
+
     
     
     @IBAction func share(_ sender: AnyObject) {

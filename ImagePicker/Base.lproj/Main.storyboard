@@ -42,7 +42,7 @@
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="yl6-aB-cb9"/>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="roundedRect" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="Lmi-5i-12Z" userLabel="Bottom Text">
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="Lmi-5i-12Z" userLabel="Bottom Text">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ceU-dv-Dkj"/>
@@ -58,11 +58,15 @@
                                                 <action selector="share:" destination="BYZ-38-t0r" id="nRl-l7-sMo"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="pWu-oB-UvM"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="pWu-oB-UvM">
+                                            <connections>
+                                                <action selector="cancelMeme:" destination="BYZ-38-t0r" id="pgs-9k-EXQ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="323" placeholderIntrinsicHeight="45" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="roundedRect" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="N1E-za-nhb" userLabel="Top Text">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="323" placeholderIntrinsicHeight="45" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="N1E-za-nhb" userLabel="Top Text">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="7wR-dd-FiQ"/>
