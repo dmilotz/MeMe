@@ -48,11 +48,18 @@
                                     <constraint firstAttribute="height" constant="50" id="ceU-dv-Dkj"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-xn-X1z">
                                 <items>
-                                    <navigationItem title="Title" id="vQn-aD-H9x"/>
+                                    <navigationItem id="vQn-aD-H9x">
+                                        <barButtonItem key="leftBarButtonItem" title="Share" id="azY-X7-EfF">
+                                            <connections>
+                                                <action selector="share:" destination="BYZ-38-t0r" id="nRl-l7-sMo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="pWu-oB-UvM"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="323" placeholderIntrinsicHeight="45" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="roundedRect" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="N1E-za-nhb" userLabel="Top Text">
@@ -61,7 +68,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="7wR-dd-FiQ"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -99,6 +106,7 @@
                         <outlet property="bottomText" destination="Lmi-5i-12Z" id="B2Q-zh-A5g"/>
                         <outlet property="cameraButton" destination="Jyr-dS-Gce" id="EFw-MC-bgl"/>
                         <outlet property="imagePicker" destination="qYe-UG-8iq" id="YKr-Nc-8fv"/>
+                        <outlet property="shareButton" destination="azY-X7-EfF" id="S9l-Hk-CVo"/>
                         <outlet property="topText" destination="N1E-za-nhb" id="0E3-Sv-0Ri"/>
                     </connections>
                 </viewController>
