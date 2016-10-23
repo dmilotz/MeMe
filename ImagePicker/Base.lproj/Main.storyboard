@@ -33,7 +33,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="2WP-Um-92u"/>
-                                    <barButtonItem title="Camera" id="Jyr-dS-Gce" userLabel="Camera">
+                                    <barButtonItem systemItem="camera" id="Jyr-dS-Gce" userLabel="Camera">
                                         <connections>
                                             <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="m25-iH-JWl"/>
                                         </connections>
@@ -48,17 +48,18 @@
                                     <constraint firstAttribute="height" constant="50" id="ceU-dv-Dkj"/>
                                 </constraints>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-xn-X1z">
                                 <items>
                                     <navigationItem id="vQn-aD-H9x">
-                                        <barButtonItem key="leftBarButtonItem" title="Share" id="azY-X7-EfF">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="azY-X7-EfF">
                                             <connections>
                                                 <action selector="share:" destination="BYZ-38-t0r" id="nRl-l7-sMo"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="pWu-oB-UvM">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="pWu-oB-UvM">
                                             <connections>
                                                 <action selector="cancelMeme:" destination="BYZ-38-t0r" id="pgs-9k-EXQ"/>
                                             </connections>
@@ -72,6 +73,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="7wR-dd-FiQ"/>
                                 </constraints>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
