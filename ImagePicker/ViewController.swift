@@ -20,6 +20,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var memeImage : UIImage!
     
     @IBAction func cancelMeme(_ sender: AnyObject) {
+       defaultState()
+    }
+    
+    
+    func defaultState(){
         shareButton.isEnabled = false
         bottomText.text = "Bottom"
         bottomText.defaultTextAttributes = memeTextAttributes
@@ -31,13 +36,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topText.delegate = self
         topText.textAlignment = .center
         
-        shareButton.isEnabled = false
+        
         
         imagePicker.image = nil
-        
     }
-    
-
     
     
     @IBAction func share(_ sender: AnyObject) {
@@ -112,13 +114,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             bottomText.text = ""
             bottomTextCleared = true
         }
+        
+        if textField.tag == 2 {
+            self.subscribeToKeyboardNotifications()
+        }
+        else if textField.tag == 1{
+            self.unsubscribeFromKeyboardNotifications()
+        }
        
         
     }
     
+
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
             textField.resignFirstResponder()
             return false
     }
@@ -130,13 +140,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func unsubscribeFromKeyboardNotifications() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardDidHide, object: nil)
     }
     
     
     func keyboardWillShow(notification: Notification) {
-        self.view.frame.origin.y -= getKeyboardHeight(notification: notification)
+        self.view.frame.origin.y = 0
+            
+            self.view.frame.origin.y -= getKeyboardHeight(notification: notification)
     }
     
     func keyboardWillHide(notification: Notification) {
@@ -160,16 +172,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bottomText.text = "Bottom"
-        bottomText.defaultTextAttributes = memeTextAttributes
-        bottomText.delegate = self
-        bottomText.textAlignment = NSTextAlignment.center
-            
-        topText.text = "Top"
-        topText.defaultTextAttributes = memeTextAttributes
-        topText.delegate = self
-        topText.textAlignment = .center
-        shareButton.isEnabled = false
+        self.defaultState()
     }
 
     override func didReceiveMemoryWarning() {
@@ -179,10 +182,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        imagePicker.contentMode  = UIViewContentMode.scaleAspectFit
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
         
-        self.subscribeToKeyboardNotifications()
+        
     }
 
 
