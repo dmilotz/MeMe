@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qYe-UG-8iq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qYe-UG-8iq">
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -111,7 +111,7 @@
                     <connections>
                         <outlet property="bottomText" destination="Lmi-5i-12Z" id="B2Q-zh-A5g"/>
                         <outlet property="cameraButton" destination="Jyr-dS-Gce" id="EFw-MC-bgl"/>
-                        <outlet property="imagePicker" destination="qYe-UG-8iq" id="YKr-Nc-8fv"/>
+                        <outlet property="imagePicker" destination="qYe-UG-8iq" id="U16-nc-8OG"/>
                         <outlet property="shareButton" destination="azY-X7-EfF" id="S9l-Hk-CVo"/>
                         <outlet property="topText" destination="N1E-za-nhb" id="0E3-Sv-0Ri"/>
                     </connections>

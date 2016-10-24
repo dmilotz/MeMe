@@ -14,6 +14,7 @@
 		111DA05A1DB9A0BB00919FB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111DA0581DB9A0BB00919FB7 /* LaunchScreen.storyboard */; };
 		111DA0651DB9A0BC00919FB7 /* ImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DA0641DB9A0BC00919FB7 /* ImagePickerTests.swift */; };
 		111DA0701DB9A0BC00919FB7 /* ImagePickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DA06F1DB9A0BC00919FB7 /* ImagePickerUITests.swift */; };
+		116004F81DBEAFFC006BDD33 /* MemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116004F71DBEAFFC006BDD33 /* MemeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		111DA06B1DB9A0BC00919FB7 /* ImagePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImagePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		111DA06F1DB9A0BC00919FB7 /* ImagePickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerUITests.swift; sourceTree = "<group>"; };
 		111DA0711DB9A0BC00919FB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		116004F71DBEAFFC006BDD33 /* MemeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				111DA0561DB9A0BB00919FB7 /* Assets.xcassets */,
 				111DA0581DB9A0BB00919FB7 /* LaunchScreen.storyboard */,
 				111DA05B1DB9A0BB00919FB7 /* Info.plist */,
+				116004F71DBEAFFC006BDD33 /* MemeModel.swift */,
 			);
 			path = ImagePicker;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				111DA0521DB9A0BB00919FB7 /* ViewController.swift in Sources */,
+				116004F81DBEAFFC006BDD33 /* MemeModel.swift in Sources */,
 				111DA0501DB9A0BB00919FB7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +509,7 @@
 				111DA0761DB9A0BC00919FB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		111DA0771DB9A0BC00919FB7 /* Build configuration list for PBXNativeTarget "ImagePickerTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +518,7 @@
 				111DA0791DB9A0BC00919FB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		111DA07A1DB9A0BC00919FB7 /* Build configuration list for PBXNativeTarget "ImagePickerUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +527,7 @@
 				111DA07C1DB9A0BC00919FB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -26,19 +26,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func defaultState(){
         shareButton.isEnabled = false
-        bottomText.text = "Bottom"
-        bottomText.defaultTextAttributes = memeTextAttributes
-        bottomText.delegate = self
-        bottomText.textAlignment = NSTextAlignment.center
-        
-        topText.text = "Top"
-        topText.defaultTextAttributes = memeTextAttributes
-        topText.delegate = self
-        topText.textAlignment = .center
-        
-        
-        
+        prepareTextField(textField: bottomText,defaultText:"Bottom")
+        prepareTextField(textField: topText, defaultText: "Top")
         imagePicker.image = nil
+    }
+    
+    func prepareTextField(textField: UITextField, defaultText: String) {
+        let memeTextAttributes = [
+            NSStrokeColorAttributeName : UIColor .black,
+            NSForegroundColorAttributeName : UIColor .white,
+            NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            NSStrokeWidthAttributeName : -1.0
+            ] as [String : Any]
+        
+        textField.delegate = self
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.text = defaultText
+        textField.autocapitalizationType = .allCharacters
+        textField.textAlignment = .center
+        
     }
     
     
@@ -46,7 +52,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         memeImage = generateMemedImage()
         let controller = UIActivityViewController(activityItems: [memeImage], applicationActivities: nil)
         
-        self.present(controller, animated: true, completion: nil)
+        present(controller, animated: true, completion: nil)
         
         controller.completionWithItemsHandler = {(activityType, completed, returnedItems, error) in
             
@@ -63,13 +69,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
   
 
     
-    struct Meme {
-        let botText: String
-        let topText : String
-        let originalImage: UIImage
-        let memeImage: UIImage
-        
-   }
+
     
     func save(){
        let meme = Meme(botText: bottomText.text!, topText: topText.text!, originalImage:imagePicker.image!, memeImage: memeImage )
@@ -78,18 +78,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func generateMemedImage() -> UIImage
     {
-        self.navigationController?.navigationBar.isHidden = true
-        self.navigationController?.isToolbarHidden = true
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.isToolbarHidden = true
         // Render view to an image
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        view.drawHierarchy(in: self.view.frame,
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.drawHierarchy(in: view.frame,
                                      afterScreenUpdates: true)
         let memedImage : UIImage =
             UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        self.navigationController?.navigationBar.isHidden = false
-        self.navigationController?.isToolbarHidden = false
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.isToolbarHidden = false
         
         return memedImage
     }
@@ -115,13 +115,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             bottomTextCleared = true
         }
         
-        if textField.tag == 2 {
-            self.subscribeToKeyboardNotifications()
-        }
-        else if textField.tag == 1{
-            self.unsubscribeFromKeyboardNotifications()
-        }
-       
+
         
     }
     
@@ -134,8 +128,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func subscribeToKeyboardNotifications() {
-       NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
-       NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+       NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+       NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
         
     }
     
@@ -146,13 +140,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     func keyboardWillShow(notification: Notification) {
-        self.view.frame.origin.y = 0
-            
-            self.view.frame.origin.y -= getKeyboardHeight(notification: notification)
+        if bottomText.isEditing  == true{
+            view.frame.origin.y -= getKeyboardHeight(notification: notification) - 15.0
+        }
     }
     
     func keyboardWillHide(notification: Notification) {
-        self.view.frame.origin.y = 0
+        view.frame.origin.y = 0
     }
     
     func getKeyboardHeight(notification: Notification) -> CGFloat {
@@ -164,7 +158,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // Unsubscribe
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.unsubscribeFromKeyboardNotifications()
+        unsubscribeFromKeyboardNotifications()
     }
     
     
@@ -172,31 +166,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.defaultState()
+        defaultState()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
-        
-        
+        subscribeToKeyboardNotifications()
     }
 
 
+    func pick(sourceType:UIImagePickerControllerSourceType){
+        let controller = UIImagePickerController()
+        controller.delegate = self
+        controller.sourceType = sourceType
+        present(controller, animated: true, completion: nil)
+        imagePickerController(controller, didFinishPickingMediaWithInfo: ["Blah":"Blah"])
+    }
     
     @IBAction func pickImageFromAlbum(_ sender: AnyObject) {
-        let controller = UIImagePickerController()
-        
-        controller.delegate = self
-        controller.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        self.present(controller, animated: true, completion: nil)
-       self.imagePickerController(controller, didFinishPickingMediaWithInfo: ["Blah":"Blah"])
-        
+        pick(sourceType: UIImagePickerControllerSourceType.photoLibrary)
         
     }
     
@@ -204,26 +194,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBAction func pickImageFromCamera(_ sender: AnyObject) {
-        let controller = UIImagePickerController()
-       
-        controller.delegate = self
-        controller.sourceType = UIImagePickerControllerSourceType.camera
-         self.present(controller, animated: true, completion: nil)
-        
+        pick(sourceType: UIImagePickerControllerSourceType.camera)
         
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
        
         if let img = info[UIImagePickerControllerOriginalImage] as? UIImage{
-            imagePicker.image = self.fixOrientation(img: img)
+            imagePicker.image = fixOrientation(img: img)
             
             picker.dismiss(animated: true, completion: nil)
         }
          shareButton.isEnabled = true
-        
-        
-    
         
     }
     
