@@ -20,7 +20,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     var memeImage : UIImage!
     
     @IBAction func cancelMeme(_ sender: AnyObject) {
-       defaultState()
+       //defaultState()
+        self.navigationController?.popViewController(animated: true)
     }
     
     
@@ -73,6 +74,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func save(){
        let meme = Meme(botText: bottomText.text!, topText: topText.text!, originalImage:imagePicker.image!, memeImage: memeImage )
+        
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
     
@@ -159,6 +164,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
+        self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     
@@ -174,6 +181,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         super.viewWillAppear(animated)
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
         subscribeToKeyboardNotifications()
+        self.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.isNavigationBarHidden = true
+     
     }
 
 
