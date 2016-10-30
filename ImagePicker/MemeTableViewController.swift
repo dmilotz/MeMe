@@ -13,15 +13,30 @@ import UIKit
 class MemeTableViewController:  UITableViewController{
     
     
+    
     var memes: [Meme] {
         return (UIApplication.shared.delegate as! AppDelegate).memes
     }
     
+    
     @IBAction func goToEditorView(_ sender: Any) {
         let editorController = self.storyboard!.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
-        
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
         self.navigationController!.pushViewController(editorController, animated: true)
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        //TODO: Implement flowLayout here.
     }
     
     
@@ -35,7 +50,7 @@ class MemeTableViewController:  UITableViewController{
         let meme = self.memes[(indexPath as NSIndexPath).row]
         
         // Set the name and image
-        cell.imageView?.image = meme.memeImage
+        cell.imageView?.image = meme.originalImage
         
         
         return cell

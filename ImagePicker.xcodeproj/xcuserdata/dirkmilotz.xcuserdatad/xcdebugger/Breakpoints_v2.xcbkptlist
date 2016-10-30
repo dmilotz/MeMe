@@ -38,7 +38,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImagePicker/ViewController.swift"
@@ -54,7 +54,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImagePicker/ViewController.swift"
@@ -70,7 +70,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImagePicker/ViewController.swift"
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImagePicker/MemeEditorViewController.swift"
-            timestampString = "499462051.762332"
+            timestampString = "499484061.462051"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "save()"
             landmarkType = "7">
          </BreakpointContent>
@@ -103,22 +103,6 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ImagePicker/MemeEditorViewController.swift"
-            timestampString = "499462051.762332"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "save()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImagePicker/CollectionViewController.swift"
@@ -138,43 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImagePicker/MemeTableViewController.swift"
-            timestampString = "499309139.628043"
+            timestampString = "499488870.274959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "MemeTableViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ImagePicker/MemeCollectionViewController.swift"
-            timestampString = "499373370.500074"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ImagePicker/MemeTableViewController.swift"
-            timestampString = "499373370.500074"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -198,7 +150,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImagePicker/MemeCollectionViewCell.swift"
@@ -211,14 +163,14 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "ImagePicker.MemeCollectionViewCell.memeImageView.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
                   moduleName = "ImagePicker"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dirkmilotz/Desktop/ImagePicker/ImagePicker/MemeCollectionViewCell.swift"
-                  timestampString = "499462224.483402"
+                  timestampString = "499477516.657628"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -226,14 +178,14 @@
                   offsetFromSymbolStart = "27">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "ImagePicker.MemeCollectionViewCell.memeImageView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
                   moduleName = "ImagePicker"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dirkmilotz/Desktop/ImagePicker/ImagePicker/MemeCollectionViewCell.swift"
-                  timestampString = "499462224.48735"
+                  timestampString = "499477516.661017"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -241,14 +193,14 @@
                   offsetFromSymbolStart = "42">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "ImagePicker.MemeCollectionViewCell.init (frame : __C.CGRect) -&gt; ImagePicker.MemeCollectionViewCell"
                   moduleName = "ImagePicker"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dirkmilotz/Desktop/ImagePicker/ImagePicker/MemeCollectionViewCell.swift"
-                  timestampString = "499462224.490526"
+                  timestampString = "499477516.664357"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -256,14 +208,14 @@
                   offsetFromSymbolStart = "66">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "ImagePicker.MemeCollectionViewCell.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;ImagePicker.MemeCollectionViewCell&gt;"
                   moduleName = "ImagePicker"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dirkmilotz/Desktop/ImagePicker/ImagePicker/MemeCollectionViewCell.swift"
-                  timestampString = "499462224.494256"
+                  timestampString = "499477516.66835"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -276,15 +228,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImagePicker/MemeEditorViewController.swift"
+            timestampString = "499479126.67137"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "MemeEditorViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImagePicker/MemeEditorViewController.swift"
+            timestampString = "499479591.023218"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "MemeEditorViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImagePicker/MemeCollectionViewCell.swift"
-            timestampString = "499326289.009334"
+            timestampString = "499486544.576351"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "MemeCollectionViewCell"
             landmarkType = "3">
             <Locations>
@@ -292,31 +276,16 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "ImagePicker.MemeCollectionViewCell.memeImageView.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  symbolName = "ImagePicker.MemeCollectionViewCell.memeImage.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
                   moduleName = "ImagePicker"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dirkmilotz/Desktop/ImagePicker/ImagePicker/MemeCollectionViewCell.swift"
-                  timestampString = "499462224.507582"
+                  timestampString = "499490194.21467"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
                   endingLineNumber = "18"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ImagePicker.MemeCollectionViewCell.memeImageView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
-                  moduleName = "ImagePicker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dirkmilotz/Desktop/ImagePicker/ImagePicker/MemeCollectionViewCell.swift"
-                  timestampString = "499462224.517614"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "42">
+                  offsetFromSymbolStart = "65">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -326,7 +295,7 @@
                   moduleName = "ImagePicker"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dirkmilotz/Desktop/ImagePicker/ImagePicker/MemeCollectionViewCell.swift"
-                  timestampString = "499462224.522637"
+                  timestampString = "499490194.219107"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -341,7 +310,7 @@
                   moduleName = "ImagePicker"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dirkmilotz/Desktop/ImagePicker/ImagePicker/MemeCollectionViewCell.swift"
-                  timestampString = "499462224.528926"
+                  timestampString = "499490194.222836"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -349,6 +318,22 @@
                   offsetFromSymbolStart = "28">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImagePicker/MemeCollectionViewController.swift"
+            timestampString = "499488826.145264"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "MemeCollectionViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
