@@ -115,7 +115,9 @@
                         <outlet property="bottomText" destination="Lmi-5i-12Z" id="B2Q-zh-A5g"/>
                         <outlet property="cameraButton" destination="Jyr-dS-Gce" id="EFw-MC-bgl"/>
                         <outlet property="imagePicker" destination="qYe-UG-8iq" id="lBn-ch-pSQ"/>
+                        <outlet property="navBar" destination="bb9-xn-X1z" id="hyM-TU-h5t"/>
                         <outlet property="shareButton" destination="azY-X7-EfF" id="S9l-Hk-CVo"/>
+                        <outlet property="toolBar" destination="YnV-YI-6K4" id="LqU-FQ-GFb"/>
                         <outlet property="topText" destination="N1E-za-nhb" id="0E3-Sv-0Ri"/>
                     </connections>
                 </viewController>
@@ -176,6 +178,10 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u4f-fD-cf5" id="YYg-LF-L2b"/>
+                            <outlet property="delegate" destination="u4f-fD-cf5" id="hYV-mx-0xu"/>
+                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="oeT-X3-b8t">
                         <barButtonItem key="rightBarButtonItem" title="+" id="k2f-VD-Lp7">

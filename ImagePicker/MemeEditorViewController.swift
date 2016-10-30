@@ -10,6 +10,8 @@ import UIKit
 
 class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
+    @IBOutlet var navBar: UINavigationBar!
+    @IBOutlet var toolBar: UIToolbar!
     @IBOutlet weak var bottomText: UITextField!
     @IBOutlet weak var topText: UITextField!
     @IBOutlet var imagePicker: UIImageView!
@@ -54,7 +56,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     
     @IBAction func share(_ sender: AnyObject) {
-        
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.isToolbarHidden = true
         memeImage = generateMemedImage()
         let controller = UIActivityViewController(activityItems: [memeImage], applicationActivities: nil)
         
@@ -70,7 +73,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             //controller.dismiss(animated: true, completion: {
             self.save()
         }
-
+       
     }
   
 
@@ -80,6 +83,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func save(){
        let meme = Meme(botText: bottomText.text!, topText: topText.text!, originalImage:imagePicker.image!, memeImage: memeImage )
         (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.setToolbarHidden(true, animated: false)
 
         popController()
 
@@ -88,21 +93,18 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func generateMemedImage() -> UIImage
     {
-        self.navigationController?.navigationBar.isHidden = true
-        self.navigationController?.isToolbarHidden = true
+        toolBar.isHidden = true
+        navBar.isHidden = true
         // Render view to an image
         UIGraphicsBeginImageContext(view.frame.size)
-        let finished = view.drawHierarchy(in: view.frame,
+        view.drawHierarchy(in: view.frame,
                                      afterScreenUpdates: true)
         let memedImage : UIImage =
             UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        if finished{
-        self.navigationController?.navigationBar.isHidden = false
-        self.navigationController?.setToolbarHidden(true, animated: false)
-
-        }
+        toolBar.isHidden = false
+        navBar.isHidden = false
         
         return memedImage
     }
