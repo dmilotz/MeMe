@@ -147,7 +147,7 @@
         <scene sceneID="0WL-E5-v0G">
             <objects>
                 <navigationController title="Table" id="wzc-Ba-CFI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" id="b5m-90-Ga2"/>
+                    <tabBarItem key="tabBarItem" title="" image="Tables" id="b5m-90-Ga2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d3k-mv-45h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -164,16 +164,16 @@
         <scene sceneID="Ihi-2c-TCl">
             <objects>
                 <viewController id="u4f-fD-cf5" userLabel="Table View Controller" customClass="MemeTableViewController" customModule="ImagePicker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xrj-Q6-9Ff">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xrj-Q6-9Ff">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="Op2-SY-Gdx">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="114" id="Op2-SY-Gdx">
+                                <rect key="frame" x="0.0" y="28" width="375" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Op2-SY-Gdx" id="WgQ-1a-1JM">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" tableViewCell="Op2-SY-Gdx" id="WgQ-1a-1JM">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -184,7 +184,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="oeT-X3-b8t">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="k2f-VD-Lp7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="k2f-VD-Lp7">
                             <connections>
                                 <action selector="goToEditorView:" destination="u4f-fD-cf5" id="Azt-df-9Fz"/>
                             </connections>
@@ -193,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRM-w0-AHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-188" y="-759"/>
+            <point key="canvasLocation" x="-188" y="-759.67016491754134"/>
         </scene>
         <!--Meme Detail View Controller-->
         <scene sceneID="NLS-hN-vyn">
@@ -207,7 +207,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c2K-Yp-spb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c2K-Yp-spb">
                                 <rect key="frame" x="0.0" y="33" width="375" height="634"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TM8-M6-MYb">
@@ -240,7 +240,7 @@
         <scene sceneID="tbh-XP-GJ0">
             <objects>
                 <navigationController title="Collection" id="RDh-8V-kF5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" id="oxg-4d-Iy7"/>
+                    <tabBarItem key="tabBarItem" title="" image="Collections" id="oxg-4d-Iy7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kAF-7h-may">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -257,7 +257,7 @@
         <scene sceneID="hJh-6J-eAD">
             <objects>
                 <viewController id="Pp4-4E-UbG" userLabel="Collection View Controller" customClass="MemeCollectionViewController" customModule="ImagePicker" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="LGa-m4-GJL">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" id="LGa-m4-GJL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -268,20 +268,20 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="Anj-de-CIB" customClass="MemeCollectionViewCell" customModule="ImagePicker" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="CollectionViewCell" id="Anj-de-CIB" customClass="MemeCollectionViewCell" customModule="ImagePicker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="130" height="102"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="130" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agg-MH-wFK">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agg-MH-wFK">
                                             <rect key="frame" x="-55" y="-13" width="240" height="128"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="memeImage" destination="agg-MH-wFK" id="SXe-vV-NpP"/>
                                 </connections>
@@ -293,7 +293,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="yna-iK-Rw2">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="5VO-qO-6rx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5VO-qO-6rx">
                             <connections>
                                 <action selector="goToEditorView:" destination="Pp4-4E-UbG" id="D5g-gU-2CL"/>
                             </connections>
@@ -308,4 +308,8 @@
             <point key="canvasLocation" x="-187.61061946902657" y="192.7734375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Collections" width="30" height="30"/>
+        <image name="Tables" width="30" height="30"/>
+    </resources>
 </document>

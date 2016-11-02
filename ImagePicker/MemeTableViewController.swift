@@ -31,8 +31,8 @@ class MemeTableViewController:  UITableViewController{
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = false
+        tableView.reloadData()
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,7 +50,8 @@ class MemeTableViewController:  UITableViewController{
         let meme = self.memes[(indexPath as NSIndexPath).row]
         
         // Set the name and image
-        cell.imageView?.image = meme.originalImage
+        cell.imageView?.image = meme.memeImage
+        cell.textLabel?.text = meme.topText + " " + meme.botText
         
         
         return cell

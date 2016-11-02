@@ -27,19 +27,44 @@ class MemeCollectionViewController:  UICollectionViewController{
         
     }
     
+//    override func viewWillLayoutSubviews(){
+//    super.viewDidLayoutSubviews()
+//        if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+//            let itemWidth = view.bounds.width / 3.0
+//            let itemHeight = layout.itemSize.height
+//            layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
+//            layout.invalidateLayout()
+//        }
+//    
+//    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionView?.frame = self.view.frame
+    }
     
     // MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let space: CGFloat = 3.0
-        let dimension = (view.frame.size.width - (2 * space)) / 3.0
+//        let space: CGFloat = 3.0
+//        let dimension = (view.frame.size.width - (2 * space)) / 3.0
         
-        flowLayout.minimumInteritemSpacing = space
-        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+//        flowLayout.minimumInteritemSpacing = space
+//        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
         collectionView?.reloadData()
         //TODO: Implement flowLayout here.
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let picDimension = self.view.frame.size.width / 4.0
+        return CGSize(width: picDimension, height: picDimension)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        let leftRightInset = self.view.frame.size.width / 14.0
+        return UIEdgeInsetsMake(0, leftRightInset, 0, leftRightInset)
     }
     
     override func viewWillAppear(_ animated: Bool) {
