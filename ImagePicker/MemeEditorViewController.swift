@@ -29,8 +29,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func popController(){
         
-        self.navigationController?.popViewController(animated: true)
+        self.presentingViewController?.dismiss(animated: true)
     }
+    
+    
     func defaultState(){
         shareButton.isEnabled = false
         prepareTextField(textField: bottomText,defaultText:"Bottom")
@@ -56,8 +58,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     
     @IBAction func share(_ sender: AnyObject) {
-        self.navigationController?.navigationBar.isHidden = true
-        self.navigationController?.isToolbarHidden = true
+        //self.navigationController?.navigationBar.isHidden = true
+        //self.navigationController?.isToolbarHidden = true
         memeImage = generateMemedImage()
         let controller = UIActivityViewController(activityItems: [memeImage], applicationActivities: nil)
         
@@ -83,8 +85,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func save(){
        let meme = Meme(botText: bottomText.text!, topText: topText.text!, originalImage:imagePicker.image!, memeImage: memeImage )
         (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
-        self.navigationController?.navigationBar.isHidden = false
-        self.navigationController?.setToolbarHidden(true, animated: false)
+        //self.navigationController?.navigationBar.isHidden = false
+        //self.navigationController?.setToolbarHidden(true, animated: false)
 
         popController()
 
@@ -217,15 +219,17 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         pick(sourceType: UIImagePickerControllerSourceType.camera)
         
     }
-    
+    var i = 0
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
        
         if let img = info[UIImagePickerControllerOriginalImage] as? UIImage{
             imagePicker.image = fixOrientation(img: img)
-            
-            picker.dismiss(animated: true, completion: nil)
+            //imagePicker.image = img
+            i += 1
+         
+            picker.dismiss(animated: true, completion: {self.shareButton.isEnabled = true})
         }
-         shareButton.isEnabled = true
+        
         
     }
     

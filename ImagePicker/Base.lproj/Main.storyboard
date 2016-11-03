@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bYr-p3-SmJ">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,17 +18,17 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qYe-UG-8iq">
-                                <rect key="frame" x="0.0" y="44" width="375" height="579"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="648"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="YnV-YI-6K4">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnV-YI-6K4">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <items>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ilY-RH-Q5M"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Q0w-7j-yEt"/>
@@ -48,7 +48,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lmi-5i-12Z" userLabel="Bottom Text">
-                                <rect key="frame" x="26" y="522" width="323" height="50"/>
+                                <rect key="frame" x="30" y="591" width="354" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ceU-dv-Dkj"/>
@@ -57,8 +57,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-xn-X1z">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-xn-X1z">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <items>
                                     <navigationItem id="vQn-aD-H9x">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="azY-X7-EfF">
@@ -75,7 +75,7 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="323" placeholderIntrinsicHeight="45" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1E-za-nhb" userLabel="Top Text">
-                                <rect key="frame" x="26" y="74" width="323" height="50"/>
+                                <rect key="frame" x="30" y="74" width="354" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="7wR-dd-FiQ"/>
@@ -123,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3235" y="-313"/>
+            <point key="canvasLocation" x="704" y="-230"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2nA-4f-J23">
@@ -165,15 +165,15 @@
             <objects>
                 <viewController id="u4f-fD-cf5" userLabel="Table View Controller" customClass="MemeTableViewController" customModule="ImagePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xrj-Q6-9Ff">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="114" id="Op2-SY-Gdx">
-                                <rect key="frame" x="0.0" y="28" width="375" height="114"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" tableViewCell="Op2-SY-Gdx" id="WgQ-1a-1JM">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -187,6 +187,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="k2f-VD-Lp7">
                             <connections>
                                 <action selector="goToEditorView:" destination="u4f-fD-cf5" id="Azt-df-9Fz"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="0NP-AR-hPG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -204,14 +205,14 @@
                         <viewControllerLayoutGuide type="bottom" id="c5d-Yv-n6P"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UyL-pJ-d5J">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c2K-Yp-spb">
-                                <rect key="frame" x="0.0" y="33" width="375" height="634"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c2K-Yp-spb">
+                                <rect key="frame" x="0.0" y="33" width="414" height="703"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TM8-M6-MYb">
-                                <rect key="frame" x="0.0" y="-11" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="-11" width="414" height="44"/>
                                 <items>
                                     <navigationItem id="2XP-yA-zKm"/>
                                 </items>
@@ -234,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lra-Rp-5BQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672.79999999999995" y="-301.79910044977515"/>
+            <point key="canvasLocation" x="1258" y="1529"/>
         </scene>
         <!--Collection-->
         <scene sceneID="tbh-XP-GJ0">
@@ -258,7 +259,7 @@
             <objects>
                 <viewController id="Pp4-4E-UbG" userLabel="Collection View Controller" customClass="MemeCollectionViewController" customModule="ImagePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" id="LGa-m4-GJL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wnv-gi-aX3">
@@ -296,6 +297,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5VO-qO-6rx">
                             <connections>
                                 <action selector="goToEditorView:" destination="Pp4-4E-UbG" id="D5g-gU-2CL"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="GoToEditorView" id="T81-Nc-Ir3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -309,7 +311,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Collections" width="30" height="30"/>
+        <image name="Collections" width="29" height="30"/>
         <image name="Tables" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="T81-Nc-Ir3"/>
+    </inferredMetricsTieBreakers>
 </document>

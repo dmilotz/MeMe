@@ -19,12 +19,19 @@ class MemeCollectionViewController:  UICollectionViewController{
     @IBOutlet var flowLayout: UICollectionViewFlowLayout!
     
     @IBAction func goToEditorView(_ sender: Any) {
-        let editorController = self.storyboard!.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
-        //self.navigationController?.isNavigationBarHidden = true
-        self.tabBarController?.tabBar.isHidden = true
-        self.navigationController?.isNavigationBarHidden = true
-        self.navigationController!.pushViewController(editorController, animated: true)
+        let editorVC = MemeEditorViewController()
+        editorVC.modalPresentationStyle = .overCurrentContext
+        present(editorVC, animated: true, completion: nil)
         
+    }
+    
+    // MARK: Life Cycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        collectionView?.reloadData()
     }
     
     
@@ -33,14 +40,13 @@ class MemeCollectionViewController:  UICollectionViewController{
         collectionView?.frame = self.view.frame
     }
     
-    // MARK: Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         collectionView?.reloadData()
-        //TODO: Implement flowLayout here.
     }
+    
+  
+    // MARK: Flow Layout
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let picDimension = self.view.frame.size.width / 4.0
@@ -52,22 +58,12 @@ class MemeCollectionViewController:  UICollectionViewController{
         return UIEdgeInsetsMake(0, leftRightInset, 0, leftRightInset)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
-        self.tabBarController?.tabBar.isHidden = false
-        print(memes)
-        collectionView?.reloadData()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        
-    }
+
     
     // MARK: Collection View Data Source
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(self.memes.count)
+      
         return self.memes.count
     }
     
@@ -79,7 +75,6 @@ class MemeCollectionViewController:  UICollectionViewController{
         // Set the name and image
        // cell.nameLabel.text = meme.name
         cell.memeImage?.image =  meme.memeImage
-        print("Returning CELLL")
         return cell
     }
     

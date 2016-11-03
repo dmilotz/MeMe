@@ -1,4 +1,4 @@
-//
+
 //  TableViewController.swift
 //  ImagePicker
 //
@@ -20,10 +20,9 @@ class MemeTableViewController:  UITableViewController{
     
     
     @IBAction func goToEditorView(_ sender: Any) {
-        let editorController = self.storyboard!.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
-        self.navigationController?.isNavigationBarHidden = true
-        self.tabBarController?.tabBar.isHidden = true
-        self.navigationController!.pushViewController(editorController, animated: true)
+        let editorVC = MemeEditorViewController()
+        editorVC.modalPresentationStyle = .overCurrentContext
+        present(editorVC, animated: true, completion: nil)
     }
     
     
@@ -33,12 +32,7 @@ class MemeTableViewController:  UITableViewController{
         self.tabBarController?.tabBar.isHidden = false
         tableView.reloadData()
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //TODO: Implement flowLayout here.
-    }
-    
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.memes.count
